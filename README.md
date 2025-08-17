@@ -26,9 +26,6 @@ Sensör modülleri (GPS, Bluetooth HC-05, ESP8266, GSM modülleri vb.)
 
 Debug ve veri takibi (seri port terminali üzerinden)
 
-TTL vs RS-232
-
-UART protokolü, veriyi voltaj seviyeleriyle iletir. Ancak bu voltaj seviyeleri farklı standartlarda olabilir. En sık karşılaşılan iki standart TTL ve RS-232'dir.
 
 TTL (Transistor-Transistor Logic):
 
