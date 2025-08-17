@@ -25,3 +25,38 @@ Mikrodenetleyici – Mikrodenetleyici iletişimi
 Sensör modülleri (GPS, Bluetooth HC-05, ESP8266, GSM modülleri vb.)
 
 Debug ve veri takibi (seri port terminali üzerinden)
+
+TTL vs RS-232
+
+UART protokolü, veriyi voltaj seviyeleriyle iletir. Ancak bu voltaj seviyeleri farklı standartlarda olabilir. En sık karşılaşılan iki standart TTL ve RS-232'dir.
+
+TTL (Transistor-Transistor Logic):
+
+Mikrodenetleyiciler ve gömülü sistemlerde en yaygın kullanılan mantık seviyesidir.
+
+Lojik "1" genellikle +3.3V veya +5V seviyesidir.
+
+Lojik "0" ise 0V (GND) seviyesidir.
+
+TTL seviyeleri, kısa mesafeli ve aynı güç kaynağını kullanan cihazlar arasında doğrudan iletişim için idealdir.
+
+RS-232:
+
+Daha eski bilgisayar sistemlerinin seri portlarında kullanılan bir standarttır.
+
+TTL'ye göre ters bir mantık kullanır ve daha yüksek voltaj seviyelerinde çalışır.
+
+Lojik "1" genellikle -3V ile -15V arasındadır.
+
+Lojik "0" ise +3V ile +15V arasındadır.
+
+Bu yüksek voltaj seviyeleri sayesinde RS-232, daha uzun mesafelerde ve elektriksel gürültüye daha dayanıklı bir iletişim sağlar.
+
+TTL seviyelerini RS-232'ye dönüştürmek için MAX232 gibi özel entegrelere ihtiyaç duyulur.
+
+FIFO Bellek (First-In, First-Out Buffer)
+Modern mikrodenetleyicilerdeki UART birimleri genellikle bir FIFO (First-In, First-Out) bellek ile donatılmıştır. Bu, bir veri tamponu (buffer) görevi görür ve veri akışını yönetir.
+
+Gönderim Tarafında: Gönderilecek veriler, TX hattına gönderilmeden önce bu belleğe yazılır. UART modülü, verileri birer birer gönderirken, işlemci yeni verileri belleğe yazmaya devam edebilir. Bu, işlemci yükünü azaltır ve daha hızlı bir veri akışı sağlar.
+
+Alıcı Tarafında: Gelen veriler, RX hattından okunduktan sonra bu belleğe yazılır. İşlemci, gelen verileri bu bellekten okur. Eğer işlemci başka bir görevle meşgulken yeni veriler gelirse, bu veriler bellekte birikir ve işlemci müsait olduğunda hepsini birden okuyabilir. Bu, yavaş işlemci veya yazılım gecikmelerinden kaynaklanan veri kaybı riskini azaltır.
