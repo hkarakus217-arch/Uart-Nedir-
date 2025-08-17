@@ -6,6 +6,7 @@ BVerici (Transmitter): Verici, verileri seri olarak ileten cihazdır. Veri ileti
 Alıcı (Receiver): Alıcı, veriyi alır ve veriyi analiz eder. Verinin başlangıcını ve bitişini tanımak için başlangıç biti ve durma biti kullanılır. Alıcı, verinin doğruluğunu kontrol etmek için durum bitlerini kullanabilir.
 
 UART haberleşme protokolü, iki cihaz arasında veri iletimi sağlar ve farklı hızlarla (baud hızı) çalışabilir. Her iki cihazın baud hızları uyumlu olmalıdır.
+
 Baud Hızı (Baud Rate): Saniyede iletilen bit sayısını ifade eden veri iletişim hızıdır. İki cihazın da aynı baud hızında (örneğin, 9600, 115200) ayarlanması zorunludur.Eğer iki cihazın baud rate ayarı uyuşmazsa (fark %2–3’ten fazla olursa) veriler kayar ve bozulur.
 STM32’de UART baud rate, sistem clock’una göre hesaplanarak ayarlanır.
 
