@@ -1,14 +1,11 @@
 # Uart-Nedir-
 UART (Universal Asynchronous Receiver/Transmitter), mikrodenetleyiciler ile bilgisayar veya başka cihazlar arasında seri veri iletişimi sağlayan bir donanım birimidir. Asenkron çalışır, yani veri iletiminde saat sinyali (clock) kullanılmaz. Bunun yerine gönderici ve alıcı taraflar aynı baud rate (iletişim hızı) ayarında kullanılır.
 
-Başlangıç Biti (Start Bit): Alıcıya verinin geldiğini bildiren ve iletişimi başlatan tek bir bittir (genellikle 0).
+BVerici (Transmitter): Verici, verileri seri olarak ileten cihazdır. Veri iletimi için bir seri veri akışı kullanılır. Verici, veriyi başlatma biti (Start Bit), veriyi (Data Bits), durum bitleri (Parity Bit), ve durdurma biti (Stop Bit) gibi bileşenlerle birlikte gönderir.
 
-Veri Bitleri (Data Frame): Asıl veriyi içeren bitlerdir. Genellikle 5 ila 9 bit arasında değişir. Çoğu uygulamada 8 bit kullanılır.
+Alıcı (Receiver): Alıcı, veriyi alır ve veriyi analiz eder. Verinin başlangıcını ve bitişini tanımak için başlangıç biti ve durma biti kullanılır. Alıcı, verinin doğruluğunu kontrol etmek için durum bitlerini kullanabilir.
 
-Eşlik Biti (Parity Bit): Veri iletiminde hata kontrolü için kullanılan isteğe bağlı bir bittir. Gönderilen 1'lerin sayısının tek mi çift mi olduğunu kontrol ederek tek bitlik hataları tespit etmeye yarar.
-
-Durdurma Biti (Stop Bit): Veri paketinin bittiğini belirten bir veya iki bittir (genellikle 1). Alıcının bir sonraki veri paketine hazırlanmasını sağlar.
-
+UART haberleşme protokolü, iki cihaz arasında veri iletimi sağlar ve farklı hızlarla (baud hızı) çalışabilir. Her iki cihazın baud hızları uyumlu olmalıdır.
 Baud Hızı (Baud Rate): Saniyede iletilen bit sayısını ifade eden veri iletişim hızıdır. İki cihazın da aynı baud hızında (örneğin, 9600, 115200) ayarlanması zorunludur.Eğer iki cihazın baud rate ayarı uyuşmazsa (fark %2–3’ten fazla olursa) veriler kayar ve bozulur.
 STM32’de UART baud rate, sistem clock’una göre hesaplanarak ayarlanır.
 
