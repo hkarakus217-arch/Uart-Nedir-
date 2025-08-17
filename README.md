@@ -24,7 +24,7 @@ RX (Receive): Karşı taraftan gelen seri veriyi alır ve paralel hale çevirir.
 
 Gönderme ve alma aynı anda yapılabilir (full-duplex).
 
-# UART Nerelerde Kullanılır?
+** UART Nerelerde Kullanılır? **
 Mikrodenetleyici – Bilgisayar (ör. STM32 ↔ PC, USB-TTL dönüştürücü ile)
 
 Mikrodenetleyici – Mikrodenetleyici iletişimi
