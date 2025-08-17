@@ -18,11 +18,7 @@ Eşlik Biti (Parity Bit): Hata kontrolü için kullanılan eşlik bitinin (tek v
 
 Durdurma Biti Sayısı (Stop Bits): Veri paketinin sonundaki durdurma bitlerinin sayısıdır (1 veya 2).
 
-TX (Transmit): Mikrodenetleyici veriyi seri hale çevirir ve hatta gönderir.
 
-RX (Receive): Karşı taraftan gelen seri veriyi alır ve paralel hale çevirir.
-
-Gönderme ve alma aynı anda yapılabilir (full-duplex).
 
 **UART Nerelerde Kullanılır?**
 
@@ -62,6 +58,12 @@ Lojik "0" ise +3V ile +15V arasındadır.
 Bu yüksek voltaj seviyeleri sayesinde RS-232, daha uzun mesafelerde ve elektriksel gürültüye daha dayanıklı bir iletişim sağlar.
 
 TTL seviyelerini RS-232'ye dönüştürmek için MAX232 gibi özel entegrelere ihtiyaç duyulur.
+
+TX (Transmit): Mikrodenetleyici veriyi seri hale çevirir ve hatta gönderir.
+
+RX (Receive): Karşı taraftan gelen seri veriyi alır ve paralel hale çevirir.
+
+Gönderme ve alma aynı anda yapılabilir (full-duplex).
 
 FIFO Bellek (First-In, First-Out Buffer)
 Modern mikrodenetleyicilerdeki UART birimleri genellikle bir FIFO (First-In, First-Out) bellek ile donatılmıştır. Bu, bir veri tamponu (buffer) görevi görür ve veri akışını yönetir.
