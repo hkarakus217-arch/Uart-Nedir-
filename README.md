@@ -35,6 +35,10 @@ Sensör modülleri (GPS, Bluetooth HC-05, ESP8266, GSM modülleri vb.)
 Debug ve veri takibi (seri port terminali üzerinden)
 
 
+
+
+
+
 TTL (Transistor-Transistor Logic):
 
 Mikrodenetleyiciler ve gömülü sistemlerde en yaygın kullanılan mantık seviyesidir.
