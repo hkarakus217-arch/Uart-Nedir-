@@ -9,13 +9,20 @@ Eşlik Biti (Parity Bit): Veri iletiminde hata kontrolü için kullanılan iste�
 
 Durdurma Biti (Stop Bit): Veri paketinin bittiğini belirten bir veya iki bittir (genellikle 1). Alıcının bir sonraki veri paketine hazırlanmasını sağlar.
 
-Baud Hızı (Baud Rate): Saniyede iletilen bit sayısını ifade eden veri iletişim hızıdır. İki cihazın da aynı baud hızında (örneğin, 9600, 115200) ayarlanması zorunludur.
+Baud Hızı (Baud Rate): Saniyede iletilen bit sayısını ifade eden veri iletişim hızıdır. İki cihazın da aynı baud hızında (örneğin, 9600, 115200) ayarlanması zorunludur.Eğer iki cihazın baud rate ayarı uyuşmazsa (fark %2–3’ten fazla olursa) veriler kayar ve bozulur.
+STM32’de UART baud rate, sistem clock’una göre hesaplanarak ayarlanır.
 
 Veri Uzunluğu (Data Length): Veri çerçevesindeki bit sayısıdır (örneğin, 8 bit).
 
 Eşlik Biti (Parity Bit): Hata kontrolü için kullanılan eşlik bitinin (tek veya çift) açık olup olmadığıdır.
 
 Durdurma Biti Sayısı (Stop Bits): Veri paketinin sonundaki durdurma bitlerinin sayısıdır (1 veya 2).
+
+TX (Transmit): Mikrodenetleyici veriyi seri hale çevirir ve hatta gönderir.
+
+RX (Receive): Karşı taraftan gelen seri veriyi alır ve paralel hale çevirir.
+
+Gönderme ve alma aynı anda yapılabilir (full-duplex).
 
 # UART Nerelerde Kullanılır?
 Mikrodenetleyici – Bilgisayar (ör. STM32 ↔ PC, USB-TTL dönüştürücü ile)
