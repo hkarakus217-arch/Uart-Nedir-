@@ -1,5 +1,6 @@
 # Uart-Nedir-
 UART (Universal Asynchronous Receiver/Transmitter), mikrodenetleyiciler ile bilgisayar veya başka cihazlar arasında seri veri iletişimi sağlayan bir donanım birimidir. Asenkron çalışır, yani veri iletiminde saat sinyali (clock) kullanılmaz. Bunun yerine gönderici ve alıcı taraflar aynı baud rate (iletişim hızı) ayarında kullanılır.
+
 Başlangıç Biti (Start Bit): Alıcıya verinin geldiğini bildiren ve iletişimi başlatan tek bir bittir (genellikle 0).
 
 Veri Bitleri (Data Frame): Asıl veriyi içeren bitlerdir. Genellikle 5 ila 9 bit arasında değişir. Çoğu uygulamada 8 bit kullanılır.
